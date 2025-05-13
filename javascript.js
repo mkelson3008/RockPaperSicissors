@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getRandomIntInclusive(min, max){
     const minCeiled = Math.ceil(min);
     const maxFloored = Math.floor(max);
@@ -6,15 +9,30 @@ function getRandomIntInclusive(min, max){
 
 function getComputerChoice(){
     let computerChoice = getRandomIntInclusive(0, 2);
-;
+
     if (computerChoice === 0){
-        return "Rock";
+        return "rock";
     }
     else if (computerChoice === 1) {
-        return "Paper";
+        return "paper";
     }
     else {
-        return "Scissors";
+        return "scissors";
     }
     
 }
+
+function getHumanChoice() {
+    userInput = prompt("Type your move: Rock, Paper, or Scissors").toLowerCase();
+
+    if (userInput === "rock"){
+        return userInput;
+    }
+    else if (userInput === "paper"){
+        return userInput;
+    }
+    else {
+        return userInput;
+    }
+}
+
