@@ -37,6 +37,7 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
+
     if (humanChoice === "rock" && computerChoice === "scissors") {
         humanScore += 1;
     }
@@ -55,5 +56,21 @@ function playRound(humanChoice, computerChoice) {
     else if (computerChoice === "scissors" && humanChoice === "paper") {
         computerScore += 1;
     }
+
+    return 
 }
 
+function playGame() {
+    let totalRounds = 5;
+
+    for (let i = 0; i < totalRounds; i++){
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+
+    console.log(`
+        Player's score: ${humanScore}.
+        Computer's score: ${computerScore}.
+        `)
+}
+
+playGame();
