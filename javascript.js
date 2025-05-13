@@ -36,3 +36,24 @@ function getHumanChoice() {
     }
 }
 
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === "rock" && computerChoice === "scissors") {
+        humanScore += 1;
+    }
+    else if (computerChoice === "rock" && humanChoice === "scissors") {
+        computerScore += 1;
+    }
+    else if (humanChoice === "paper" && computerChoice === "rock") {
+        humanScore += 1;
+    }
+    else if (computerChoice === "paper" && humanChoice === "rock") {
+        computerScore += 1;
+    }
+    else if (humanChoice === "scissors" && computerChoice === "paper") {
+        humanScore += 1;
+    }
+    else if (computerChoice === "scissors" && humanChoice === "paper") {
+        computerScore += 1;
+    }
+}
+
